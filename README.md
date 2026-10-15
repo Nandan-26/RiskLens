@@ -14,3 +14,9 @@ Flask/MySQL REST backend with business CRUD, validation, filtering, pagination, 
 `GET /api/health`; `POST/GET /api/businesses`; `GET/PUT/DELETE /api/businesses/<id>`; `POST /api/scrape/practice-site`; `GET /api/risk/evaluate/<id>`.
 
 No live credentials are packaged. Automated tests require a running MySQL instance and initialized schema; syntax checks alone do not establish passing integration tests.
+## Verification
+
+- Flask health endpoint returned a healthy MySQL connection.
+- Automated test suite: 4 tests passed.
+- Development and testing use separate MySQL databases.
+- The scoring functionality is illustrative only.
