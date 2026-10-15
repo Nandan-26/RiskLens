@@ -1,0 +1,90 @@
+{
+  "info": {
+    "name": "RiskLens API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:5000/api/health"
+      }
+    },
+    {
+      "name": "Create Business",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:5000/api/businesses",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"company_name\": \"Example Ltd\",\n  \"registration_number\": \"EX-001\",\n  \"country\": \"India\",\n  \"industry\": \"Technology\",\n  \"contact_email\": \"hello@example.com\",\n  \"founded_year\": 2020\n}"
+        }
+      }
+    },
+    {
+      "name": "List Businesses",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:5000/api/businesses?page=1&limit=10"
+      }
+    },
+    {
+      "name": "Get Business",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:5000/api/businesses/1"
+      }
+    },
+    {
+      "name": "Update Business",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:5000/api/businesses/1",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"industry\": \"Finance\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Delete Business",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "http://localhost:5000/api/businesses/1"
+      }
+    },
+    {
+      "name": "Scrape Practice Site",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://localhost:5000/api/scrape/practice-site"
+      }
+    },
+    {
+      "name": "Demo Risk",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:5000/api/risk/evaluate/1"
+      }
+    }
+  ]
+}
